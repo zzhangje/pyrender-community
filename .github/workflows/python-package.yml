@@ -34,9 +34,7 @@ jobs:
             libegl1 \
             xvfb \
             mesa-utils \
-            mesa-utils-extra \
-            libgl1-mesa-glx \
-            libgl1-mesa-dri \
+            mesa-utils-extra 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
