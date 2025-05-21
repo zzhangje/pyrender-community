@@ -33,7 +33,9 @@ dev_requirements = [
     'pre-commit',        # Pre-commit hooks
     'pytest',            # Code testing
     'pytest-cov',        # Coverage testing
+    'PyVirtualDisplay',  # For headless testing
     'tox',               # Automatic virtualenv testing
+    'xvfbwrapper',       # For headless testing
 ]
 
 docs_requirements = [
@@ -51,6 +53,8 @@ setup(
                        '(PBR) in Python. Compliant with the glTF 2.0 standard.',
     author='Matthew Matl',
     author_email='matthewcmatl@gmail.com',
+    maintainer="Zirui Zhang",
+    maintainer_email="zhangzrjerry@outlook.com",
     license='MIT License',
     url = 'https://github.com/mmatl/pyrender',
     classifiers = [
@@ -61,6 +65,12 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Natural Language :: English',
         'Topic :: Scientific/Engineering'
     ],
