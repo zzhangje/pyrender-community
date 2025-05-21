@@ -7,6 +7,8 @@ import abc
 import numpy as np
 import six
 
+import os
+os.environ['PYOPENGL_PLATFORM'] = 'egl'
 from OpenGL.GL import *
 
 from .utils import format_color_vector

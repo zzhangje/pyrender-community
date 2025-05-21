@@ -27,6 +27,7 @@ class PygletPlatform(Platform):
             pass
 
         self._window = None
+        e = None
         confs = [pyglet.gl.Config(sample_buffers=1, samples=4,
                                   depth_size=24,
                                   double_buffer=True,
@@ -51,8 +52,8 @@ class PygletPlatform(Platform):
                                                     resizable=False,
                                                     width=1, height=1)
                 break
-            except pyglet.window.NoSuchConfigException as e:
-                pass
+            except pyglet.window.NoSuchConfigException as exc:
+                e = exc
 
         if not self._window:
             raise ValueError(
