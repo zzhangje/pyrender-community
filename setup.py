@@ -34,6 +34,7 @@ dev_requirements = [
     'pre-commit',        # Pre-commit hooks
     'pytest',            # Code testing
     'pytest-cov',        # Coverage testing
+    'pyvirtualdisplay',  # For headless testing
     'tox',               # Automatic virtualenv testing
 ]
 
