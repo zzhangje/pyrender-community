@@ -1,4 +1,4 @@
-# from pyrender.platforms import egl
+from pyrender.platforms import egl
 
 
 def tmp_test_default_device():
