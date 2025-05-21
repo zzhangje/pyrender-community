@@ -2,6 +2,7 @@ freetype-py
 imageio
 networkx
 numpy
+Pegl
 Pillow
 pyglet==1.4.0a1
 PyOpenGL
@@ -11,4 +12,3 @@ trimesh
 sphinx
 sphinx_rtd_theme
 sphinx-automodapi
-egl
