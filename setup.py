@@ -26,6 +26,7 @@ requirements = [
     'scipy',                      # Because of trimesh missing dep
     'six',                        # For Python 2/3 interop
     'trimesh',                    # For meshes
+    'egl',                        # For EGL support
 ]
 
 dev_requirements = [
