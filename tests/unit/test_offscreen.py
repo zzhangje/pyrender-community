@@ -1,16 +1,11 @@
 import numpy as np
 import trimesh
-import os
-import pytest
 
 from pyrender import (OffscreenRenderer, PerspectiveCamera, DirectionalLight,
                       SpotLight, Mesh, Node, Scene)
 
 
 def test_offscreen_renderer(tmpdir):
-    if os.getenv("CI"):
-        pytest.skip("Skipping test in CI environment")
-
     # Fuze trimesh
     fuze_trimesh = trimesh.load('examples/models/fuze.obj')
     fuze_mesh = Mesh.from_trimesh(fuze_trimesh)
