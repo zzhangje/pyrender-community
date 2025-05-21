@@ -3,7 +3,7 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zhangzrjerry/PyrenderPatch/python-package.yml)
 [![Downloads](https://pepy.tech/badge/pyrender)](https://pepy.tech/project/pyrender)
 
-Pyrender is a pure Python library for physically-based rendering and visualization. The original Pyrender supports Python 2.7 and 3.4–3.6, while Pyrender Patch extends compatibility to **Python 3.7 through 3.13**. It is designed to meet the [glTF 2.0 specification from Khronos](https://www.khronos.org/gltf/).
+Pyrender is a pure Python library for physically-based rendering and visualization. The original Pyrender supports Python 2.7 and 3.4–3.6, while Pyrender Patch extends compatibility to **Python 3.8 through 3.13**. It is designed to meet the [glTF 2.0 specification from Khronos](https://www.khronos.org/gltf/).
 
 Pyrender is lightweight, easy to install, and simple to use.
 It comes packaged with both an intuitive scene viewer and a headache-free
