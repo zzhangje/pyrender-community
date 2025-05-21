@@ -2,6 +2,7 @@
 Setup of pyrender Python codebase.
 
 Author: Matthew Matl
+Maintainer: Zirui Zhang
 """
 import sys
 from setuptools import setup
@@ -65,7 +66,6 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
