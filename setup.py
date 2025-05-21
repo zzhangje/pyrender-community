@@ -20,7 +20,6 @@ requirements = [
     get_imageio_dep(),            # For Image I/O
     'networkx',                   # For the scene graph
     'numpy',                      # Numpy
-    'Pegl',                       # For EGL support
     'Pillow',                     # For Trimesh texture conversions
     'pyglet>=1.4.10',             # For the pyglet viewer
     'PyOpenGL~=3.1.0',            # For OpenGL
@@ -34,7 +33,6 @@ dev_requirements = [
     'pre-commit',        # Pre-commit hooks
     'pytest',            # Code testing
     'pytest-cov',        # Coverage testing
-    'pyvirtualdisplay',  # For headless testing
     'tox',               # Automatic virtualenv testing
 ]
 
