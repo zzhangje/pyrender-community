@@ -3,7 +3,6 @@ from pyrender.constants import (TARGET_OPEN_GL_MAJOR, TARGET_OPEN_GL_MINOR,
 from .base import Platform
 from pyglet import display, window, gl
 import OpenGL
-import os
 
 
 __all__ = ['PygletPlatform']
@@ -27,7 +26,6 @@ class PygletPlatform(Platform):
         except Exception:
             pass
 
-        os.environ["PYGLET_HEADLESS"] = "True"
         self._window = None
         e = None
 
