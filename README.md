@@ -1,4 +1,4 @@
-# Pyrender EGL
+# Pyrender Patch
 
 ![Package Version](https://img.shields.io/badge/version-0.1.46-orange)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zhangzrjerry/PyrenderPatch/python-package.yml)
@@ -26,7 +26,7 @@ check out the [EGL Google CoLab Notebook](https://colab.research.google.com/driv
 You can install pyrender directly from pip.
 
 ```bash
-pip install pyrender@git+https://github.com/ZhangzrJerry/PyrenderEgl.git
+pip install pyrender@git+https://github.com/ZhangzrJerry/PyrenderPatch.git
 ```
 
 ## Features
