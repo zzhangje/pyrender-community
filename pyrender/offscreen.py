@@ -138,10 +138,10 @@ class OffscreenRenderer(object):
             self._platform = egl.EGLPlatform(self.viewport_width,
                                              self.viewport_height,
                                              device=egl_device)
-        elif os.environ['PYOPENGL_PLATFORM'] == 'osmesa':
-            from pyrender.platforms.osmesa import OSMesaPlatform
-            self._platform = OSMesaPlatform(self.viewport_width,
-                                            self.viewport_height)
+        # elif os.environ['PYOPENGL_PLATFORM'] == 'osmesa':
+        #     from pyrender.platforms.osmesa import OSMesaPlatform
+        #     self._platform = OSMesaPlatform(self.viewport_width,
+        #                                     self.viewport_height)
         else:
             raise ValueError('Unsupported PyOpenGL platform: {}'.format(
                 os.environ['PYOPENGL_PLATFORM']

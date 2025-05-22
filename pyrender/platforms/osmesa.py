@@ -4,6 +4,7 @@ from .base import Platform
 __all__ = ['OSMesaPlatform']
 
 
+@DeprecationWarning
 class OSMesaPlatform(Platform):
     """Renders into a software buffer using OSMesa. Requires special versions
     of OSMesa to be installed, plus PyOpenGL upgrade.

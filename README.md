@@ -1,4 +1,4 @@
-# Pyrender Patch
+# Pyrender EGL
 
 ![Package Version](https://img.shields.io/badge/version-0.1.46-orange)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zhangzrjerry/PyrenderPatch/python-package.yml)
@@ -26,7 +26,7 @@ check out the [EGL Google CoLab Notebook](https://colab.research.google.com/driv
 You can install pyrender directly from pip.
 
 ```bash
-pip install pyrender@git+https://github.com/ZhangzrJerry/PyrenderPatch.git
+pip install pyrender@git+https://github.com/ZhangzrJerry/PyrenderEgl.git
 ```
 
 ## Features
@@ -38,7 +38,7 @@ Despite being lightweight, pyrender has lots of features, including:
   STL, DAE, OFF, PLY, and GLB.
 - An easy-to-use scene viewer with support for animation, showing face and vertex
   normals, toggling lighting conditions, and saving images and GIFs.
-- An offscreen rendering module that supports OSMesa and EGL backends.
+- An offscreen rendering module that supports EGL backends.
 - Shadow mapping for directional and spot lights.
 - Metallic-roughness materials for physically-based rendering, including several
   types of texture and normal mapping.
