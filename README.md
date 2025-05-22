@@ -1,5 +1,6 @@
 # Pyrender Patch
 
+![Package Version](https://img.shields.io/badge/version-0.1.46-orange)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zhangzrjerry/PyrenderPatch/python-package.yml)
 [![Downloads](https://pepy.tech/badge/pyrender)](https://pepy.tech/project/pyrender)
 

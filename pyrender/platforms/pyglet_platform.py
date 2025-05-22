@@ -1,8 +1,9 @@
 from pyrender.constants import (TARGET_OPEN_GL_MAJOR, TARGET_OPEN_GL_MINOR,
                                 MIN_OPEN_GL_MAJOR, MIN_OPEN_GL_MINOR)
 from .base import Platform
-
+from pyglet import display, window, gl
 import OpenGL
+import os
 
 
 __all__ = ['PygletPlatform']
@@ -26,42 +27,52 @@ class PygletPlatform(Platform):
         except Exception:
             pass
 
+        os.environ["PYGLET_HEADLESS"] = "True"
         self._window = None
         e = None
-        confs = [pyglet.gl.Config(sample_buffers=1, samples=4,
-                                  depth_size=24,
-                                  double_buffer=True,
-                                  major_version=TARGET_OPEN_GL_MAJOR,
-                                  minor_version=TARGET_OPEN_GL_MINOR),
-                 pyglet.gl.Config(depth_size=24,
-                                  double_buffer=True,
-                                  major_version=TARGET_OPEN_GL_MAJOR,
-                                  minor_version=TARGET_OPEN_GL_MINOR),
-                 pyglet.gl.Config(sample_buffers=1, samples=4,
-                                  depth_size=24,
-                                  double_buffer=True,
-                                  major_version=MIN_OPEN_GL_MAJOR,
-                                  minor_version=MIN_OPEN_GL_MINOR),
-                 pyglet.gl.Config(depth_size=24,
-                                  double_buffer=True,
-                                  major_version=MIN_OPEN_GL_MAJOR,
-                                  minor_version=MIN_OPEN_GL_MINOR)]
-        for conf in confs:
-            try:
-                self._window = pyglet.window.Window(config=conf, visible=False,
-                                                    resizable=False,
-                                                    width=1, height=1)
-                break
-            except pyglet.window.NoSuchConfigException as exc:
-                e = exc
 
-        if not self._window:
-            raise ValueError(
-                'Failed to initialize Pyglet window with an OpenGL >= 3+ '
-                'context. If you\'re logged in via SSH, ensure that you\'re '
-                'running your script with vglrun (i.e. VirtualGL). The '
-                'internal error message was "{}"'.format(e)
+        # Try different attribute sets
+        configs = [
+            gl.Config(
+                sample_buffers=1,
+                samples=4,
+                depth_size=24,
+                double_buffer=True,
+                major_version=TARGET_OPEN_GL_MAJOR,
+                minor_version=TARGET_OPEN_GL_MINOR
+            ),
+            gl.Config(
+                depth_size=24,
+                double_buffer=True,
+                major_version=TARGET_OPEN_GL_MAJOR,
+                minor_version=TARGET_OPEN_GL_MINOR
+            ),
+            gl.Config(
+                sample_buffers=1,
+                samples=4,
+                depth_size=24,
+                double_buffer=True, 
+                major_version=MIN_OPEN_GL_MAJOR,
+                minor_version=MIN_OPEN_GL_MINOR
+            ),
+            gl.Config(
+                depth_size=24,
+                double_buffer=True,
+                major_version=MIN_OPEN_GL_MAJOR,
+                minor_version=MIN_OPEN_GL_MINOR
             )
+        ]
+
+        for config in configs:
+            try:
+                self._window = window.Window(config=config, visible=False, resizable=False, width=1, height=1)
+                break
+            except window.NoSuchConfigException as exc:
+                e = exc
+                continue
+
+        if self._window is None:
+            raise RuntimeError("Failed to create an OpenGL context: {}".format(e))
 
     def make_current(self):
         if self._window:
