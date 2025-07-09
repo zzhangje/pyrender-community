@@ -26,7 +26,7 @@ check out the [EGL Google CoLab Notebook](https://colab.research.google.com/driv
 You can install pyrender directly from pip.
 
 ```bash
-pip install pyrender@git+https://github.com/ZhangzrJerry/PyrenderPatch.git
+pip install pyrender@git+https://github.com/zzhangje/pyrender-community.git
 ```
 
 ## Features
