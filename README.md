@@ -29,6 +29,12 @@ You can install pyrender directly from pip.
 pip install pyrender@git+https://github.com/zzhangje/pyrender-community.git
 ```
 
+Try set the environment variable when encounter opengl engine problem:
+
+```bash
+export pyopengl_platform="your_engine"
+```
+
 ## Features
 
 Despite being lightweight, pyrender has lots of features, including:
