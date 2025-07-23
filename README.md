@@ -32,7 +32,7 @@ pip install pyrender@git+https://github.com/zzhangje/pyrender-community.git
 Try set the environment variable when encounter opengl engine problem:
 
 ```bash
-export pyopengl_platform="your_engine"
+export PYOPENGL_PLATFORM="your_engine"
 ```
 
 ## Features
